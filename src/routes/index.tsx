@@ -15,9 +15,9 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import heroImg from "@/assets/hero-asge.jpg";
+import heroImg from "@/assets/hero-energyfit.jpg";
 
-const title = "ASGE — Academia Sustentável de Geração Energética";
+const title = "EnergyFit — Academia Sustentável de Geração Energética";
 const description =
   "Academia onde cada passo vira energia: equipamentos fitness geradores, sistema solar fotovoltaico e gestão inteligente transformam treino em eletricidade limpa.";
 
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Academia Sustentável de Geração Energética (ASGE)",
+          name: "EnergyFit — Academia Sustentável de Geração Energética",
           description,
           url: "/",
         }),
@@ -137,7 +137,7 @@ function Navbar() {
           <span className="bg-energy grid h-9 w-9 shrink-0 place-items-center rounded-xl">
             <Zap className="h-5 w-5 text-primary-foreground" />
           </span>
-          <span className="truncate font-display text-lg font-bold tracking-tight">ASGE</span>
+          <span className="truncate font-display text-lg font-bold tracking-tight">EnergyFit</span>
         </a>
         <div className="hidden items-center gap-8 md:flex">
           {links.map(([href, label]) => (
@@ -178,7 +178,7 @@ function Hero() {
           Transformando <span className="text-energy">Movimento</span> em Energia
         </h1>
         <p className="mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          A Academia Sustentável de Geração Energética converte o esforço físico de cada aluno em
+          A EnergyFit converte o esforço físico de cada aluno em
           eletricidade limpa, integrando equipamentos geradores, energia solar fotovoltaica e um
           sistema inteligente de armazenamento e gerenciamento.
         </p>
@@ -238,7 +238,7 @@ function Sistemas() {
         <SectionTitle
           tag="Arquitetura do sistema"
           title="Quatro camadas integradas de geração inteligente"
-          sub="Cada componente do ASGE trabalha em conjunto para capturar, converter, armazenar e distribuir energia limpa."
+          sub="Cada componente da EnergyFit trabalha em conjunto para capturar, converter, armazenar e distribuir energia limpa."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {sistemas.map((s) => (
@@ -263,7 +263,7 @@ function ComoFunciona() {
         <SectionTitle
           tag="Fluxo energético"
           title="Do primeiro passo à rede elétrica"
-          sub="O ciclo completo da energia dentro da ASGE, em quatro etapas contínuas."
+          sub="O ciclo completo da energia dentro da EnergyFit, em quatro etapas contínuas."
         />
         <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {etapas.map((e) => (
@@ -383,7 +383,7 @@ function Impacto() {
         <SectionTitle
           tag="Impacto ambiental"
           title="Sustentabilidade que se mede em números"
-          sub="A operação da ASGE reduz o consumo da rede convencional e transforma hábitos de saúde em ganho ambiental coletivo."
+          sub="A operação da EnergyFit reduz o consumo da rede convencional e transforma hábitos de saúde em ganho ambiental coletivo."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
@@ -407,7 +407,7 @@ function Beneficios() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-5">
-        <SectionTitle tag="Benefícios" title="Por que treinar na ASGE" />
+        <SectionTitle tag="Benefícios" title="Por que treinar na EnergyFit" />
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {beneficios.map((b) => (
             <article key={b.t} className="card-glow flex gap-5 rounded-3xl p-7">
@@ -446,7 +446,7 @@ function CTA() {
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
               <a
-                href="mailto:contato@asge.eco"
+                href="mailto:contato@energyfit.eco"
                 className="bg-energy glow hover:glow-strong inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-primary-foreground transition-shadow"
               >
                 Agendar visita <ArrowRight className="h-4 w-4" />
@@ -468,16 +468,16 @@ function Footer() {
             <span className="bg-energy grid h-8 w-8 place-items-center rounded-lg">
               <Zap className="h-4 w-4 text-primary-foreground" />
             </span>
-            <span className="font-display font-bold">ASGE</span>
+            <span className="font-display font-bold">EnergyFit</span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Academia Sustentável de Geração Energética — movimento humano convertido em energia
+            EnergyFit — movimento humano convertido em energia
             elétrica limpa.
           </p>
         </div>
         <div className="space-y-3 text-sm text-muted-foreground">
           <p className="flex items-center gap-2">
-            <Mail className="h-4 w-4 text-neon" /> contato@asge.eco
+            <Mail className="h-4 w-4 text-neon" /> contato@energyfit.eco
           </p>
           <p className="flex items-center gap-2">
             <Phone className="h-4 w-4 text-neon" /> +55 (11) 4000-0000
@@ -494,7 +494,7 @@ function Footer() {
         </div>
       </div>
       <p className="mt-10 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} ASGE. Todos os direitos reservados.
+        © {new Date().getFullYear()} EnergyFit. Todos os direitos reservados.
       </p>
     </footer>
   );
