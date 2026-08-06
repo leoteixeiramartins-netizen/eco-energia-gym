@@ -65,37 +65,37 @@
   --card-foreground: #ffffff;
   --popover: #1a1a1a;
   --popover-foreground: #ffffff;
-  --primary: #00c853;
-  --primary-foreground: #04140a;
-  --neon: #00e676;
+  --primary: #ffd600;
+  --primary-foreground: #141000;
+  --neon: #ffea00;
   --secondary: #1a1a1a;
   --secondary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: #b0b0b0;
-  --accent: #43a047;
+  --accent: #f9a825;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 230, 118, 0.16);
-  --input: rgba(0, 230, 118, 0.22);
-  --ring: #00e676;
-  --chart-1: #00c853;
-  --chart-2: #00e676;
-  --chart-3: #43a047;
-  --chart-4: #7bffb0;
-  --chart-5: #0f6b35;
+  --border: rgba(255, 234, 0, 0.16);
+  --input: rgba(255, 234, 0, 0.22);
+  --ring: #ffea00;
+  --chart-1: #ffd600;
+  --chart-2: #ffea00;
+  --chart-3: #f9a825;
+  --chart-4: #ffe57f;
+  --chart-5: #a37200;
   --sidebar: #121212;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #00c853;
-  --sidebar-primary-foreground: #04140a;
+  --sidebar-primary: #ffd600;
+  --sidebar-primary-foreground: #141000;
   --sidebar-accent: #1a1a1a;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(0, 230, 118, 0.16);
-  --sidebar-ring: #00e676;
-  --gradient-energy: linear-gradient(135deg, #00c853, #00e676, #43a047);
+  --sidebar-border: rgba(255, 234, 0, 0.16);
+  --sidebar-ring: #ffea00;
+  --gradient-energy: linear-gradient(135deg, #ffd600, #ffea00, #f9a825);
   --gradient-deep: linear-gradient(180deg, #0a0a0a, #121212);
-  --glow-soft: 0 0 24px rgba(0, 230, 118, 0.25);
-  --glow-strong: 0 0 48px rgba(0, 230, 118, 0.45);
+  --glow-soft: 0 0 24px rgba(255, 234, 0, 0.25);
+  --glow-strong: 0 0 48px rgba(255, 234, 0, 0.45);
 }
 
 .dark {
@@ -150,19 +150,19 @@
 @utility glass {
   background: rgba(10, 10, 10, 0.6);
   backdrop-filter: blur(18px) saturate(140%);
-  border-bottom: 1px solid rgba(0, 230, 118, 0.14);
+  border-bottom: 1px solid rgba(255, 234, 0, 0.14);
 }
 
 @utility card-glow {
   background: var(--card);
-  border: 1px solid rgba(0, 230, 118, 0.18);
+  border: 1px solid rgba(255, 234, 0, 0.18);
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease,
     transform 0.3s ease;
 
   &:hover {
-    border-color: rgba(0, 230, 118, 0.55);
+    border-color: rgba(255, 234, 0, 0.55);
     box-shadow: var(--glow-soft);
     transform: translateY(-4px);
   }
@@ -170,8 +170,8 @@
 
 @utility grid-lines {
   background-image:
-    linear-gradient(rgba(0, 230, 118, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 230, 118, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(255, 234, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 234, 0, 0.06) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -186,7 +186,7 @@
 
 @utility energy-line {
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00e676, #00c853, transparent);
+  background: linear-gradient(90deg, transparent, #ffea00, #ffd600, transparent);
   background-size: 200% 100%;
   animation: energy-flow 3s linear infinite;
 }
