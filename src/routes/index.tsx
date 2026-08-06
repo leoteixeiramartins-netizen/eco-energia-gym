@@ -197,7 +197,7 @@ function Hero() {
           </a>
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-3xl border border-primary/25 shadow-[0_0_80px_-20px_rgba(0,230,118,0.5)]">
+        <div className="mt-16 overflow-hidden rounded-3xl border border-primary/25 shadow-[0_0_80px_-20px_rgba(255,234,0,0.5)]">
           <img
             src={heroImg}
             alt="Interior de academia futurista com equipamentos conectados por trilhas de energia verde e painéis solares"
@@ -316,7 +316,7 @@ function Dashboard() {
               {barras.map((b) => (
                 <div key={b.l} className="flex flex-1 flex-col items-center gap-3">
                   <div
-                    className="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(0,230,118,0.4)]"
+                    className="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]"
                     style={{ height: `${b.h}%` }}
                   />
                   <span className="text-[11px] text-muted-foreground">{b.l}</span>
