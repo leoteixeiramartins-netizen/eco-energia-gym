@@ -99,13 +99,13 @@
   --gradient-deep: linear-gradient(180deg, #0a0a0a, #121212);
   --glow-soft: 0 0 24px rgba(255, 234, 0, 0.25);
   --glow-strong: 0 0 48px rgba(255, 234, 0, 0.45);
-  --nav-surface: rgba(42, 15, 18, 0.72);
-  --nav-border: rgba(255, 255, 255, 0.1);
-  --nav-active: rgba(0, 0, 0, 0.32);
-  --nav-muted: rgba(226, 214, 214, 0.72);
-  --nav-cta: #ffffff;
-  --nav-cta-foreground: #1a0a0c;
-  --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --nav-surface: rgba(18, 18, 18, 0.72);
+  --nav-border: rgba(255, 234, 0, 0.16);
+  --nav-active: rgba(255, 234, 0, 0.12);
+  --nav-muted: #b0b0b0;
+  --nav-cta: #ffd600;
+  --nav-cta-foreground: #141000;
+  --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 .dark {
