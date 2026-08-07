@@ -27,6 +27,9 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-neon: var(--neon);
+  --color-nav-muted: var(--nav-muted);
+  --color-nav-cta: var(--nav-cta);
+  --color-nav-cta-foreground: var(--nav-cta-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -96,6 +99,13 @@
   --gradient-deep: linear-gradient(180deg, #0a0a0a, #121212);
   --glow-soft: 0 0 24px rgba(255, 234, 0, 0.25);
   --glow-strong: 0 0 48px rgba(255, 234, 0, 0.45);
+  --nav-surface: rgba(42, 15, 18, 0.72);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --nav-active: rgba(0, 0, 0, 0.32);
+  --nav-muted: rgba(226, 214, 214, 0.72);
+  --nav-cta: #ffffff;
+  --nav-cta-foreground: #1a0a0c;
+  --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .dark {
@@ -205,4 +215,17 @@
 
 @utility pulse-orb {
   animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@utility nav-glass {
+  background: var(--nav-surface);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--nav-border);
+  box-shadow: var(--nav-shadow);
+}
+
+@utility nav-item-active {
+  background: var(--nav-active);
+  color: #ffffff;
+  font-weight: 500;
 }
