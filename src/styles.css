@@ -216,3 +216,16 @@
 @utility pulse-orb {
   animation: pulse-glow 4s ease-in-out infinite;
 }
+
+@utility nav-glass {
+  background: var(--nav-surface);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--nav-border);
+  box-shadow: var(--nav-shadow);
+}
+
+@utility nav-item-active {
+  background: var(--nav-active);
+  color: #ffffff;
+  font-weight: 500;
+}
