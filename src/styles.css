@@ -27,6 +27,9 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-neon: var(--neon);
+  --color-nav-muted: var(--nav-muted);
+  --color-nav-cta: var(--nav-cta);
+  --color-nav-cta-foreground: var(--nav-cta-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
