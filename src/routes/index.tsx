@@ -123,40 +123,81 @@ function Index() {
   );
 }
 
+const navLinks = [
+  { href: "#top", label: "Home" },
+  { href: "#como-funciona", label: "Missões" },
+  { href: "#impacto", label: "Destinos" },
+  { href: "#tecnologia", label: "Tecnologia" },
+  { href: "#dashboard", label: "Reservar Voo" },
+];
+
 function Navbar() {
-  const links = [
-    ["#tecnologia", "Tecnologia"],
-    ["#como-funciona", "Como funciona"],
-    ["#dashboard", "Dashboard"],
-    ["#impacto", "Impacto"],
-  ];
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("#top");
+
   return (
-    <header className="glass fixed inset-x-0 top-0 z-50">
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:flex sm:justify-between">
-        <a href="#top" className="flex min-w-0 items-center gap-2">
-          <span className="bg-energy grid h-9 w-9 shrink-0 place-items-center rounded-xl">
-            <Zap className="h-5 w-5 text-primary-foreground" />
-          </span>
-          <span className="truncate font-display text-lg font-bold tracking-tight">EnergyFit</span>
-        </a>
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map(([href, label]) => (
-            <a
-              key={href}
-              href={href}
-              className="text-sm text-muted-foreground transition-colors hover:text-neon"
-            >
-              {label}
-            </a>
-          ))}
-        </div>
-        <a
-          href="#contato"
-          className="bg-energy hover:glow-strong inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-primary-foreground transition-shadow"
-        >
-          Seja membro
-        </a>
-      </nav>
+    <header className="fixed inset-x-0 top-4 z-50 px-4">
+      <div className="mx-auto max-w-[1200px]">
+        <nav className="nav-glass flex h-[52px] items-center justify-between gap-6 rounded-full pr-1.5 pl-2 sm:pl-4">
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Abrir menu"
+            aria-expanded={open}
+            className="text-nav-muted grid h-10 w-10 shrink-0 place-items-center rounded-full transition-colors hover:text-white md:hidden"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+
+          <ul className="hidden items-center gap-1 md:flex">
+            {navLinks.map((l) => (
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  onClick={() => setActive(l.href)}
+                  className={
+                    active === l.href
+                      ? "nav-item-active inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors"
+                      : "text-nav-muted inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300 hover:text-white"
+                  }
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#contato"
+            className="bg-nav-cta text-nav-cta-foreground inline-flex shrink-0 items-center gap-1.5 rounded-full px-6 py-[10px] text-sm font-medium transition-transform duration-300 hover:scale-[1.04]"
+          >
+            Reservar Assento <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </nav>
+
+        {open ? (
+          <ul className="nav-glass mt-2 flex flex-col gap-1 rounded-3xl p-3 md:hidden">
+            {navLinks.map((l) => (
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  onClick={() => {
+                    setActive(l.href);
+                    setOpen(false);
+                  }}
+                  className={
+                    active === l.href
+                      ? "nav-item-active block rounded-full px-4 py-2.5 text-sm"
+                      : "text-nav-muted block rounded-full px-4 py-2.5 text-sm transition-colors hover:text-white"
+                  }
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
     </header>
   );
 }
