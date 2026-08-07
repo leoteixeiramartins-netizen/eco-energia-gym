@@ -226,6 +226,6 @@
 
 @utility nav-item-active {
   background: var(--nav-active);
-  color: #ffffff;
+  color: var(--neon);
   font-weight: 500;
 }
