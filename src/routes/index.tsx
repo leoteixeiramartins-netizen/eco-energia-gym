@@ -218,53 +218,76 @@ function Navbar() {
   );
 }
 
+const parceiros = ["Solaris", "VoltGrid", "EcoWatt", "Kinetix", "GreenLoop"];
+
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <div className="grid-lines absolute inset-0 opacity-60" aria-hidden />
+    <section id="top" className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+      <div className="absolute inset-0" aria-hidden>
+        <img
+          src={heroImg}
+          alt=""
+          className="h-full w-full object-cover opacity-45"
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,.55),rgba(10,10,10,.92)_65%,var(--background))]" />
+      </div>
+      <div className="grid-lines absolute inset-0 opacity-40" aria-hidden />
       <div
-        className="pulse-orb absolute top-[-10rem] left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full opacity-30 blur-[120px]"
+        className="pulse-orb absolute top-[-12rem] left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full opacity-25 blur-[130px]"
         style={{ background: "var(--gradient-energy)" }}
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-5">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card px-4 py-1.5 text-xs font-medium tracking-wide text-neon uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-neon" /> Energia cinética + solar
+
+      <div className="relative mx-auto max-w-4xl px-5 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card/70 py-1.5 pr-4 pl-1.5 text-sm backdrop-blur">
+          <span className="bg-energy text-primary-foreground rounded-full px-2.5 py-1 text-xs font-semibold">
+            Novo
+          </span>
+          <span className="text-muted-foreground">Simulador nutricional já disponível</span>
         </span>
-        <h1 className="mt-6 max-w-4xl text-4xl leading-[1.05] font-bold sm:text-6xl lg:text-7xl">
-          Transformando <span className="text-energy">Movimento</span> em Energia
+
+        <h1 className="mt-7 text-4xl leading-[1.05] font-bold sm:text-6xl lg:text-7xl">
+          Transformando <span className="text-energy">Movimento</span>
+          <br className="hidden sm:block" /> em Energia Limpa
         </h1>
-        <p className="mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          A EnergyFit converte o esforço físico de cada aluno em
-          eletricidade limpa, integrando equipamentos geradores, energia solar fotovoltaica e um
-          sistema inteligente de armazenamento e gerenciamento.
+
+        <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
+          A EnergyFit converte o esforço físico de cada aluno em eletricidade limpa, integrando
+          equipamentos geradores, energia solar fotovoltaica e um sistema inteligente de
+          armazenamento e gerenciamento.
         </p>
-        <div className="mt-9 flex flex-wrap gap-3">
+
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            to="/simulador"
+            className="bg-energy glow hover:glow-strong text-primary-foreground inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-shadow"
+          >
+            Simular minha nutrição <ArrowRight className="h-4 w-4" />
+          </Link>
           <a
             href="#como-funciona"
-            className="bg-energy glow hover:glow-strong inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold text-primary-foreground transition-shadow"
-          >
-            Conheça a tecnologia <ArrowRight className="h-4 w-4" />
-          </a>
-          <a
-            href="#impacto"
             className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:border-neon hover:text-neon"
           >
-            Ver impacto ambiental
+            Conheça a tecnologia
           </a>
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-3xl border border-primary/25 shadow-[0_0_80px_-20px_rgba(255,234,0,0.5)]">
-          <img
-            src={heroImg}
-            alt="Interior de academia futurista com equipamentos conectados por trilhas de energia verde e painéis solares"
-            width={1600}
-            height={1008}
-            className="w-full object-cover"
-          />
+        <p className="mt-16 text-xs tracking-widest text-muted-foreground uppercase">
+          Parcerias com líderes em energia limpa
+        </p>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          {parceiros.map((p) => (
+            <span
+              key={p}
+              className="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon"
+            >
+              {p}
+            </span>
+          ))}
         </div>
 
-        <dl className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <dl className="mt-16 grid grid-cols-2 gap-4 text-left lg:grid-cols-4">
           {metricas.map((m) => (
             <div key={m.label} className="card-glow rounded-2xl p-5">
               <dt className="text-energy font-display text-3xl font-bold">{m.valor}</dt>
@@ -276,6 +299,7 @@ function Hero() {
     </section>
   );
 }
+
 
 function SectionTitle({ tag, title, sub }: { tag: string; title: string; sub?: string }) {
   return (
