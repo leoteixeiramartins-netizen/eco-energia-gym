@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EnergyFit — Academia Sustentável de Geração Energética</title>
+    <meta
+      name="description"
+      content="Academia onde cada passo vira energia: equipamentos fitness geradores, sistema solar fotovoltaico e gestão inteligente transformam treino em eletricidade limpa."
+    />
+    <meta name="author" content="EnergyFit" />
+    <meta property="og:site_name" content="EnergyFit" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="EnergyFit — Academia Sustentável de Geração Energética" />
+    <meta
+      property="og:description"
+      content="Academia onde cada passo vira energia: equipamentos fitness geradores, sistema solar fotovoltaico e gestão inteligente transformam treino em eletricidade limpa."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EnergyFit — Academia Sustentável de Geração Energética",
+        "description": "Academia onde cada passo vira energia: equipamentos fitness geradores, sistema solar fotovoltaico e gestão inteligente transformam treino em eletricidade limpa.",
+        "url": "/"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="min-h-screen">
+      <!-- ============ NAVBAR ============ -->
+      <header class="fixed inset-x-0 top-4 z-50 px-4">
+        <div class="mx-auto max-w-[1200px]">
+          <nav
+            class="nav-glass flex h-[60px] items-center justify-between gap-4 rounded-full py-1.5 pr-1.5 pl-3 sm:h-[64px] sm:pl-5"
+          >
+            <a href="index.html" class="flex shrink-0 items-center gap-2">
+              <span
+                class="grid h-8 w-8 place-items-center rounded-full"
+                style="background: var(--gradient-energy)"
+              >
+                <i data-lucide="zap" class="text-primary-foreground h-4 w-4"></i>
+              </span>
+              <span class="font-display text-base font-bold">EnergyFit</span>
+            </a>
+
+            <ul class="hidden items-center gap-1 lg:flex">
+              <li>
+                <a href="index.html" class="nav-item-active inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="#tecnologia" class="text-nav-muted hover:text-foreground inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300">Tecnologia</a>
+              </li>
+              <li>
+                <a href="#como-funciona" class="text-nav-muted hover:text-foreground inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300">Como Funciona</a>
+              </li>
+              <li>
+                <a href="#dashboard" class="text-nav-muted hover:text-foreground inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300">Dashboard</a>
+              </li>
+              <li>
+                <a href="#impacto" class="text-nav-muted hover:text-foreground inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300">Impacto</a>
+              </li>
+              <li>
+                <a href="simulador.html" class="text-nav-muted hover:text-foreground inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors duration-300">Simulador</a>
+              </li>
+            </ul>
+
+            <div class="flex shrink-0 items-center gap-1.5">
+              <a
+                href="#contato"
+                class="bg-nav-cta text-nav-cta-foreground inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-medium transition-transform duration-300 hover:scale-[1.04] sm:px-6"
+                style="box-shadow: var(--glow-soft)"
+              >
+                Fazer parte <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+              <button
+                type="button"
+                id="nav-toggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                class="text-nav-muted hover:text-foreground grid h-10 w-10 place-items-center rounded-full transition-colors lg:hidden"
+              >
+                <i data-lucide="menu" class="h-5 w-5" id="nav-toggle-icon"></i>
+              </button>
+            </div>
+          </nav>
+
+          <ul id="nav-mobile" class="nav-glass mt-2 hidden flex-col gap-1 rounded-3xl p-3 lg:hidden">
+            <li><a href="index.html" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Home</a></li>
+            <li><a href="#tecnologia" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Tecnologia</a></li>
+            <li><a href="#como-funciona" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Como Funciona</a></li>
+            <li><a href="#dashboard" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Dashboard</a></li>
+            <li><a href="#impacto" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Impacto</a></li>
+            <li><a href="simulador.html" class="text-nav-muted hover:text-foreground block rounded-full px-4 py-2.5 text-sm transition-colors">Simulador</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <!-- ============ HERO ============ -->
+        <section id="top" class="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+          <div class="absolute inset-0" aria-hidden="true">
+            <img src="assets/hero-energyfit.jpg" alt="" class="h-full w-full object-cover opacity-45" aria-hidden="true" />
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,.55),rgba(10,10,10,.92)_65%,var(--background))]"></div>
+          </div>
+          <div class="grid-lines absolute inset-0 opacity-40" aria-hidden="true"></div>
+          <div
+            class="pulse-orb absolute top-[-12rem] left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full opacity-25 blur-[130px]"
+            style="background: var(--gradient-energy)"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative mx-auto max-w-4xl px-5 text-center">
+            <span class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card/70 py-1.5 pr-4 pl-1.5 text-sm backdrop-blur">
+              <span class="bg-energy text-primary-foreground rounded-full px-2.5 py-1 text-xs font-semibold">Novo</span>
+              <span class="text-muted-foreground">Simulador nutricional já disponível</span>
+            </span>
+
+            <h1 class="mt-7 text-4xl leading-[1.05] font-bold sm:text-6xl lg:text-7xl">
+              Transformando <span class="text-energy">Movimento</span>
+              <br class="hidden sm:block" /> em Energia Limpa
+            </h1>
+
+            <p class="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
+              A EnergyFit converte o esforço físico de cada aluno em eletricidade limpa, integrando
+              equipamentos geradores, energia solar fotovoltaica e um sistema inteligente de
+              armazenamento e gerenciamento.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="simulador.html"
+                class="bg-energy glow hover:glow-strong text-primary-foreground inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-shadow"
+              >
+                Simular minha nutrição <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+              <a
+                href="#como-funciona"
+                class="inline-flex items-center gap-2 rounded-full border border-primary/40 px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:border-neon hover:text-neon"
+              >
+                Conheça a tecnologia
+              </a>
+            </div>
+
+            <p class="mt-16 text-xs tracking-widest text-muted-foreground uppercase">
+              Parcerias com líderes em energia limpa
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+              <span class="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon">Solaris</span>
+              <span class="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon">VoltGrid</span>
+              <span class="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon">EcoWatt</span>
+              <span class="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon">Kinetix</span>
+              <span class="font-display text-lg font-bold text-muted-foreground/70 transition-colors hover:text-neon">GreenLoop</span>
+            </div>
+
+            <dl class="mt-16 grid grid-cols-2 gap-4 text-left lg:grid-cols-4">
+              <div class="card-glow rounded-2xl p-5">
+                <dt class="text-energy font-display text-3xl font-bold">38%</dt>
+                <dd class="mt-2 text-xs text-muted-foreground sm:text-sm">da demanda energética suprida pelos usuários</dd>
+              </div>
+              <div class="card-glow rounded-2xl p-5">
+                <dt class="text-energy font-display text-3xl font-bold">62%</dt>
+                <dd class="mt-2 text-xs text-muted-foreground sm:text-sm">complementados pelo sistema solar fotovoltaico</dd>
+              </div>
+              <div class="card-glow rounded-2xl p-5">
+                <dt class="text-energy font-display text-3xl font-bold">18 t</dt>
+                <dd class="mt-2 text-xs text-muted-foreground sm:text-sm">de CO₂ evitadas por ano por unidade</dd>
+              </div>
+              <div class="card-glow rounded-2xl p-5">
+                <dt class="text-energy font-display text-3xl font-bold">R$ 0</dt>
+                <dd class="mt-2 text-xs text-muted-foreground sm:text-sm">de custo com energia da rede em dias de pico</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ============ SISTEMAS ============ -->
+        <section id="tecnologia" class="relative py-24" style="background: var(--surface)">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Arquitetura do sistema</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Quatro camadas integradas de geração inteligente</h2>
+              <p class="mt-4 text-muted-foreground">
+                Cada componente da EnergyFit trabalha em conjunto para capturar, converter, armazenar e distribuir energia limpa.
+              </p>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <div class="mt-14 grid gap-6 md:grid-cols-2">
+              <article class="card-glow rounded-3xl p-8">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="zap" class="h-6 w-6 text-neon"></i>
+                </span>
+                <h3 class="mt-6 text-xl font-semibold">Equipamentos Geradores</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Esteiras, bicicletas e elípticos acoplados a dínamos e geradores de indução convertem o movimento humano em corrente elétrica contínua, retificada e estabilizada.
+                </p>
+              </article>
+              <article class="card-glow rounded-3xl p-8">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="sun" class="h-6 w-6 text-neon"></i>
+                </span>
+                <h3 class="mt-6 text-xl font-semibold">Sistema Solar Fotovoltaico</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Painéis solares na cobertura complementam a geração humana e garantem produção constante durante todo o dia, mesmo fora do horário de pico de treinos.
+                </p>
+              </article>
+              <article class="card-glow rounded-3xl p-8">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="battery-charging" class="h-6 w-6 text-neon"></i>
+                </span>
+                <h3 class="mt-6 text-xl font-semibold">Armazenamento em Banco de Baterias</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  A energia gerada é armazenada em baterias de lítio de alta densidade, prontas para alimentar iluminação, climatização e equipamentos da academia.
+                </p>
+              </article>
+              <article class="card-glow rounded-3xl p-8">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="cpu" class="h-6 w-6 text-neon"></i>
+                </span>
+                <h3 class="mt-6 text-xl font-semibold">Gestão Inteligente (EMS)</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Um sistema de gerenciamento monitora geração, consumo e carga em tempo real, distribuindo a energia de forma otimizada e enviando o excedente à rede.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ COMO FUNCIONA ============ -->
+        <section id="como-funciona" class="py-24">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Fluxo energético</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Do primeiro passo à rede elétrica</h2>
+              <p class="mt-4 text-muted-foreground">O ciclo completo da energia dentro da EnergyFit, em quatro etapas contínuas.</p>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <ol class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <li class="card-glow relative rounded-3xl p-7">
+                <span class="text-energy font-display text-5xl font-bold opacity-70">01</span>
+                <h3 class="mt-5 text-lg font-semibold">Você treina</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Cada pedalada, passo e repetição movimenta o gerador acoplado ao equipamento.</p>
+              </li>
+              <li class="card-glow relative rounded-3xl p-7">
+                <span class="text-energy font-display text-5xl font-bold opacity-70">02</span>
+                <h3 class="mt-5 text-lg font-semibold">Conversão</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">O movimento mecânico vira energia elétrica, retificada e estabilizada por inversores.</p>
+              </li>
+              <li class="card-glow relative rounded-3xl p-7">
+                <span class="text-energy font-display text-5xl font-bold opacity-70">03</span>
+                <h3 class="mt-5 text-lg font-semibold">Armazenamento</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">A carga é somada à geração solar e guardada no banco de baterias inteligente.</p>
+              </li>
+              <li class="card-glow relative rounded-3xl p-7">
+                <span class="text-energy font-display text-5xl font-bold opacity-70">04</span>
+                <h3 class="mt-5 text-lg font-semibold">Consumo limpo</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">A academia se alimenta da própria energia e devolve o excedente à rede elétrica.</p>
+              </li>
+            </ol>
+            <div class="energy-line mt-12 rounded-full"></div>
+          </div>
+        </section>
+
+        <!-- ============ DASHBOARD ============ -->
+        <section id="dashboard" class="py-24" style="background: var(--surface)">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Monitoramento em tempo real</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Um painel inteligente para cada watt gerado</h2>
+              <p class="mt-4 text-muted-foreground">
+                O sistema de gerenciamento energético acompanha produção, consumo e eficiência — e cada aluno vê a própria contribuição.
+              </p>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <div class="mt-14 grid gap-6 lg:grid-cols-[2fr_1fr]">
+              <div class="card-glow rounded-3xl p-7">
+                <div class="flex flex-wrap items-end justify-between gap-4">
+                  <div>
+                    <p class="text-xs tracking-widest text-muted-foreground uppercase">Geração semanal</p>
+                    <p class="text-energy font-display mt-1 text-4xl font-bold">412 kWh</p>
+                  </div>
+                  <span class="rounded-full border border-primary/40 px-3 py-1 text-xs text-neon">+14% vs. semana anterior</span>
+                </div>
+                <div class="mt-10 flex h-52 items-end gap-3">
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 38%"></div>
+                    <span class="text-[11px] text-muted-foreground">Seg</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 52%"></div>
+                    <span class="text-[11px] text-muted-foreground">Ter</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 44%"></div>
+                    <span class="text-[11px] text-muted-foreground">Qua</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 71%"></div>
+                    <span class="text-[11px] text-muted-foreground">Qui</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 88%"></div>
+                    <span class="text-[11px] text-muted-foreground">Sex</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 96%"></div>
+                    <span class="text-[11px] text-muted-foreground">Sáb</span>
+                  </div>
+                  <div class="flex flex-1 flex-col items-center gap-3">
+                    <div class="bg-energy w-full rounded-t-lg shadow-[0_0_18px_rgba(255,234,0,0.4)]" style="height: 61%"></div>
+                    <span class="text-[11px] text-muted-foreground">Dom</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid gap-6">
+                <div class="card-glow rounded-3xl p-6">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm text-muted-foreground">Eficiência do EMS</p>
+                    <p class="font-display text-xl font-bold text-neon">94%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-background">
+                    <div class="bg-energy h-full rounded-full" style="width: 94%"></div>
+                  </div>
+                </div>
+                <div class="card-glow rounded-3xl p-6">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm text-muted-foreground">Carga do banco de baterias</p>
+                    <p class="font-display text-xl font-bold text-neon">78%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-background">
+                    <div class="bg-energy h-full rounded-full" style="width: 78%"></div>
+                  </div>
+                </div>
+                <div class="card-glow rounded-3xl p-6">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm text-muted-foreground">Excedente enviado à rede</p>
+                    <p class="font-display text-xl font-bold text-neon">26%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-background">
+                    <div class="bg-energy h-full rounded-full" style="width: 26%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ EQUIPAMENTOS ============ -->
+        <section class="py-24">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Equipamentos</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Máquinas que devolvem energia ao prédio</h2>
+              <p class="mt-4 text-muted-foreground">Toda a linha de treino é equipada com geradores acoplados e telemetria integrada.</p>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <article class="card-glow rounded-3xl p-7">
+                <i data-lucide="bike" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-lg font-semibold">Bike Geradora</h3>
+                <p class="text-energy font-display mt-2 text-2xl font-bold">150 W/h</p>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Pico de até 200 W em treinos de alta intensidade.</p>
+              </article>
+              <article class="card-glow rounded-3xl p-7">
+                <i data-lucide="footprints" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-lg font-semibold">Esteira Cinética</h3>
+                <p class="text-energy font-display mt-2 text-2xl font-bold">120 W/h</p>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Piso cinético que aproveita cada impacto do passo.</p>
+              </article>
+              <article class="card-glow rounded-3xl p-7">
+                <i data-lucide="activity" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-lg font-semibold">Elíptico Híbrido</h3>
+                <p class="text-energy font-display mt-2 text-2xl font-bold">100 W/h</p>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Movimento contínuo de baixo impacto e geração estável.</p>
+              </article>
+              <article class="card-glow rounded-3xl p-7">
+                <i data-lucide="dumbbell" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-lg font-semibold">Estação de Força</h3>
+                <p class="text-energy font-display mt-2 text-2xl font-bold">60 W/h</p>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Resistência magnética regenerativa em cada repetição.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ IMPACTO ============ -->
+        <section id="impacto" class="relative overflow-hidden py-24" style="background: var(--surface)">
+          <div
+            class="pulse-orb absolute right-[-8rem] bottom-[-8rem] h-96 w-96 rounded-full opacity-25 blur-[110px]"
+            style="background: var(--gradient-energy)"
+            aria-hidden="true"
+          ></div>
+          <div class="relative mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Impacto ambiental</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Sustentabilidade que se mede em números</h2>
+              <p class="mt-4 text-muted-foreground">
+                A operação da EnergyFit reduz o consumo da rede convencional e transforma hábitos de saúde em ganho ambiental coletivo.
+              </p>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <div class="mt-14 grid gap-6 md:grid-cols-3">
+              <article class="card-glow rounded-3xl p-8">
+                <i data-lucide="leaf" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-xl font-semibold">Matriz 100% renovável</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Combinação de energia cinética humana e geração solar elimina a dependência de fontes fósseis.</p>
+              </article>
+              <article class="card-glow rounded-3xl p-8">
+                <i data-lucide="leaf" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-xl font-semibold">Economia circular</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">O excedente energético é injetado na rede, beneficiando o entorno e reduzindo perdas de distribuição.</p>
+              </article>
+              <article class="card-glow rounded-3xl p-8">
+                <i data-lucide="leaf" class="h-7 w-7 text-neon"></i>
+                <h3 class="mt-6 text-xl font-semibold">Educação ambiental</h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Painéis públicos mostram em tempo real quanto CO₂ a comunidade deixou de emitir treinando.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ BENEFÍCIOS ============ -->
+        <section class="py-24">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="max-w-3xl">
+              <span class="text-xs font-semibold tracking-[0.2em] text-neon uppercase">Benefícios</span>
+              <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">Por que treinar na EnergyFit</h2>
+              <div class="energy-line mt-6 w-32 rounded-full"></div>
+            </div>
+            <div class="mt-14 grid gap-6 sm:grid-cols-2">
+              <article class="card-glow flex gap-5 rounded-3xl p-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="leaf" class="h-5 w-5 text-neon"></i>
+                </span>
+                <div class="min-w-0">
+                  <h3 class="text-lg font-semibold">Impacto ambiental positivo</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Redução direta da pegada de carbono e uso de matriz 100% renovável.</p>
+                </div>
+              </article>
+              <article class="card-glow flex gap-5 rounded-3xl p-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="gauge" class="h-5 w-5 text-neon"></i>
+                </span>
+                <div class="min-w-0">
+                  <h3 class="text-lg font-semibold">Treino com propósito</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">O app mostra quantos watts-hora você gerou e o quanto isso representa em CO₂ evitado.</p>
+                </div>
+              </article>
+              <article class="card-glow flex gap-5 rounded-3xl p-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="battery-charging" class="h-5 w-5 text-neon"></i>
+                </span>
+                <div class="min-w-0">
+                  <h3 class="text-lg font-semibold">Autonomia energética</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Operação estável mesmo em falhas de fornecimento, com backup em baterias.</p>
+                </div>
+              </article>
+              <article class="card-glow flex gap-5 rounded-3xl p-7">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-primary/40 bg-background">
+                  <i data-lucide="cpu" class="h-5 w-5 text-neon"></i>
+                </span>
+                <div class="min-w-0">
+                  <h3 class="text-lg font-semibold">Dados em tempo real</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Dashboard inteligente com geração, consumo e eficiência atualizados a cada segundo.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section id="contato" class="py-24">
+          <div class="mx-auto max-w-7xl px-5">
+            <div class="relative overflow-hidden rounded-[2rem] border border-primary/30 p-10 text-center sm:p-16" style="background: var(--card)">
+              <div
+                class="pulse-orb absolute inset-x-0 top-[-6rem] mx-auto h-64 w-64 rounded-full opacity-30 blur-[100px]"
+                style="background: var(--gradient-energy)"
+                aria-hidden="true"
+              ></div>
+              <div class="relative">
+                <h2 class="text-3xl font-bold sm:text-5xl">Seu treino pode <span class="text-energy">acender a cidade</span></h2>
+                <p class="mx-auto mt-5 max-w-2xl text-muted-foreground">
+                  Faça parte da primeira academia que devolve energia limpa ao mundo. Agende uma visita e acompanhe ao vivo a geração do seu primeiro watt.
+                </p>
+                <div class="mt-9 flex flex-wrap justify-center gap-3">
+                  <a
+                    href="mailto:contato@energyfit.eco"
+                    class="bg-energy glow hover:glow-strong inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-primary-foreground transition-shadow"
+                  >
+                    Agendar visita <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="border-t border-primary/15 py-12" style="background: var(--surface)">
+        <div class="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-energy grid h-8 w-8 place-items-center rounded-lg">
+                <i data-lucide="zap" class="h-4 w-4 text-primary-foreground"></i>
+              </span>
+              <span class="font-display font-bold">EnergyFit</span>
+            </div>
+            <p class="mt-4 max-w-xs text-sm text-muted-foreground">
+              EnergyFit — movimento humano convertido em energia elétrica limpa.
+            </p>
+          </div>
+          <div class="space-y-3 text-sm text-muted-foreground">
+            <p class="flex items-center gap-2"><i data-lucide="mail" class="h-4 w-4 text-neon"></i> contato@energyfit.eco</p>
+            <p class="flex items-center gap-2"><i data-lucide="phone" class="h-4 w-4 text-neon"></i> +55 (11) 4000-0000</p>
+            <p class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4 text-neon"></i> São Paulo, Brasil</p>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-muted-foreground md:items-end">
+            <a href="#tecnologia" class="hover:text-neon">Tecnologia</a>
+            <a href="#como-funciona" class="hover:text-neon">Como funciona</a>
+            <a href="#dashboard" class="hover:text-neon">Dashboard</a>
+            <a href="#impacto" class="hover:text-neon">Impacto</a>
+          </div>
+        </div>
+        <p class="mt-10 text-center text-xs text-muted-foreground">
+          © <span data-year>2026</span> EnergyFit. Todos os direitos reservados.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
